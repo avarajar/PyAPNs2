@@ -151,6 +151,8 @@ class APNsClient(object):
         The function returns: 'Success' or 'failure reason' or ('Unregistered', timestamp)
         """
         with self._connection.get_response(stream_id) as response:
+            import pdb
+            pdb.set_trace()
             if response.status == 200:
                 return 'Success'
             else:
